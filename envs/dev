@@ -1,0 +1,8 @@
+# Source this file to run with development settings
+# Secret keys and passwords are for dev environment only.
+# Secret keys and passwords are imported as environment variables in
+# production environment.
+
+
+
+source venv/bin/activate
