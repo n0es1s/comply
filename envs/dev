@@ -3,6 +3,6 @@
 # Secret keys and passwords are imported as environment variables in
 # production environment.
 
-
+export DJANGO_SECRET_KEY='django-insecure-sv_cnqqnb8we6(rq^l#k_e!!!h$)%5!zot1bdd=04mu&%d!-!z'
 
 source venv/bin/activate
