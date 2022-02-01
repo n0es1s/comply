@@ -1,0 +1,85 @@
+{% block content %}
+{% load static %}
+<!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <h1 class="h3 mb-2 text-gray-800">Locations</h1>
+                    <p class="mb-4">All of your locations. If you would like to increase your number of allowed licenses,
+                    please <a href="mailto:info@mail.com">contact us</a></p>
+
+                    <!-- DataTales Example -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Locations</h6>
+                            <button class="btn btn-primary" type="button" id="dropdownMenuButton" style="position: absolute;
+right: 10px;
+top: 5px;" href="#" data-toggle="modal" data-target="#locationsModal">Add Location </button>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Location Name</th>
+                                            <th>Type</th>
+                                            <th>License #</th>
+                                            <th>Number of Products</th>
+                                            <th>Options</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                          <th>Location Name</th>
+                                          <th>Type</th>
+                                          <th>License #</th>
+                                          <th>Number of Products</th>
+                                          <th>Options</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                      {% for each in locations %}
+                                        <tr>
+                                            <td>{{ each.location_name }}</td>
+                                            <td>{{ each.location_type }}</td>
+                                            <td>{{ each.license_number }}</td>
+                                            <td>47</td>
+                                            <td>
+                                              <a href="#" class="btn btn-success btn-circle btn-sm">
+                                                <i class="fas fa-edit"></i>
+                                              </a>
+                                              <a href="#" class="btn btn-danger btn-circle btn-sm">
+                                                <i class="fas fa-trash"></i>
+                                              </a>
+                                            </td>
+
+                                        </tr>
+                                      {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- add/edit Modal-->
+                    <div class="modal fade" id="locationsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Add Location</h5>
+                                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">FORM HERE</div>
+                                <div class="modal-footer">
+                                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                    <a class="btn btn-primary" href="#">Submit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+{% endblock %}

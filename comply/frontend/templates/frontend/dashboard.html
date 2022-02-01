@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_style %}
+<link href="{% static "frontend/css/sb-admin-2.min.css" %}" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+<div id="wrapper">
+
+    <!-- Sidebar -->
+    {% include 'frontend/includes/global_sidebar.html' %}
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+            <!-- Topbar -->
+            {% include 'frontend/includes/global_top_bar.html' %}
+            <!-- End of Topbar -->
+
+            <!-- Begin Page Content -->
+            {% include 'frontend/includes/dashboard_content.html' %}
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        {% include 'frontend/includes/global_footer.html' %}
+        <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+</div>
+{% endblock %}
+
+{% block page_scripts %}
+<script src="{% static "frontend/vendor/chart.js/Chart.min.js" %}"></script>
+<script src="{% static "frontend/js/demo/chart-area-demo.js" %}"></script>
+<script src="{% static "frontend/js/demo/chart-pie-demo.js" %}"></script>  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+{% endblock %}
